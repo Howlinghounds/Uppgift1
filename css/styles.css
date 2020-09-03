@@ -293,7 +293,7 @@ ANIMATION
     margin: 40px 0;
 }
 
-/*  1. Display animation as block.
+/*  1. Display animation as inline-block.
     2. Declare size, make it round.
     3. Apply color.
     4. Name animation and declare animation length.
