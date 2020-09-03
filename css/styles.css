@@ -139,15 +139,6 @@ footer > p {
 IMAGES
 ============================================================================*/
 
-/* Center image on index page.
-*/
-
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 /*  1. Float images on Portfolio and About pages to the left.
     2. Make images rounded.
     3. Create space between images and text.
@@ -276,11 +267,25 @@ form {
   zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
 
+/* Make "*" more prominent thorugh color, font size and font weight
+*/
+
 .required {
   color: rgba(230, 17, 2, 1);
   font-size: 18px;
   font-weight: 600;
 }
+
+
+
+/*
+ANIMATION
+============================================================================*/
+
+/*  1. Declare container for animation.
+    2. Add top and bottom margins.
+    3. Move container further to the center.
+*/
 
 #animation-height {
     position: relative;
@@ -290,17 +295,29 @@ form {
     left: 40%;
 }
 
+/*  1. Display animation as block.
+    2. Declare size, make it round.
+    3. Apply color.
+    4. Name animation and declare animation length.
+    5. Make the animation alternate in direction, thus moving up and down.
+    6. Declare spcific cubic-bezier curve.
+    7. Make animation continue infifite times.
+*/
+
 .animation {
     display: block;
     width: 100px;
     height: 100px;
-    background-color: rgba(212, 182, 36, 1);
     border-radius: 50%;
+    background-color: rgba(212, 182, 36, 1);
     animation: bounce 1s;
     animation-direction: alternate;
     animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
     animation-iteration-count: infinite;
 }
+
+/* Apply keyframes for bounce animation
+*/
 
 @keyframes bounce {
     from { transform: translate3d(0, 0, 0) }
