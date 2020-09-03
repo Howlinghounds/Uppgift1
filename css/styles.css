@@ -290,9 +290,7 @@ ANIMATION
 #animation-height {
     position: relative;
     height: 200px;
-    width: 100px;
     margin: 40px 0;
-    left: 40%;
 }
 
 /*  1. Display animation as block.
@@ -304,13 +302,37 @@ ANIMATION
     7. Make animation continue infifite times.
 */
 
-.animation {
-    display: block;
+#animation-yellow {
+    display: inline-block;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     background-color: rgba(212, 182, 36, 1);
     animation: bounce 1s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+    animation-iteration-count: infinite;
+}
+
+#animation-red {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(230, 17, 2, 1);
+    animation: bounce 1.02s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+    animation-iteration-count: infinite;
+}
+
+#animation-green {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(5, 168, 10, 1);
+    animation: bounce 1.04s;
     animation-direction: alternate;
     animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
     animation-iteration-count: infinite;
