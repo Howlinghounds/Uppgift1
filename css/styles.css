@@ -1,0 +1,283 @@
+/* Import of Google Fonts.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Glegoo&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@500&display=swap');
+
+
+/*
+GENERAL LAYOUT
+============================================================================*/
+
+/* 1. Add background image.
+   2. Make it cover the entire view port.
+   3. Make line-height on all text 1.5 times the size as current font size.
+*/
+
+html {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    line-height: 1.5em;
+}
+
+/* Make bodys max-width 80% of viewport.
+*/
+
+body {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/*
+GRID LAYOUT
+==========================================================================*/
+
+/*  1. Display gird.
+    2. Create 5 columns, each 20% of bodys width.
+    */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+/*  First grid item stretches from first to last column.
+    Added color and bottom border radius for a rounded look.
+    */
+
+.grid-item1 {
+    grid-column: 1/6;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 0 0 50px 50px;
+    padding: 10px;
+}
+
+/*  Grid item two through five stretch from second to fifth column.
+    Added color.
+    */
+
+.grid-item2, 
+.grid-item3, 
+.grid-item4, 
+.grid-item5 {
+    grid-column: 2/5;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+}
+
+/*  1. Margins and bottom border radius on grid item two and five for rounded look.
+    2. Top border radius on grid item three for rounded look.
+*/
+
+.grid-item2, 
+.grid-item5 {
+    margin-bottom: 20px;
+    border-radius: 0 0 50px 50px;
+}
+
+.grid-item3 {
+    border-radius: 50px 50px 0 0;
+}
+
+/*  Grid layout for navigation. Four columns, each 25% of containers width. Evenly spaced.
+*/
+
+.nav-grid-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: space-evenly;
+}
+
+
+/*
+TYPOGRAPHY
+============================================================================*/
+
+/*  1. Display imported font family "Glegoo" on all smaller text areas except footer.
+    */
+
+.main-text, 
+label, 
+input, 
+textarea, 
+input[type="submit"] {
+    font-family: 'Glegoo', serif;
+}
+
+/*  1. Display imported font family "Expletus Sans" on h1.
+    2. Adjust font size.
+*/
+
+h1 {
+    font-family: 'Expletus Sans', cursive;
+    font-size:
+    40px;
+}
+
+/*  1. Display imported font family "Expletus Sans" on h3.
+    2. Adjust font size.
+    */
+
+h3 {
+    font-family: 'Expletus Sans', cursive;
+    margin-bottom: 20px;
+}
+
+/* Align text to center for all text except form elements.
+*/
+
+h1, 
+.navigation, 
+.main-text, 
+footer > p {
+    text-align: center;
+}
+
+
+/*
+IMAGES
+============================================================================*/
+
+/* Center image on index page.
+*/
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*  1. Float images on Portfolio and About pages to the left.
+    2. Make images rounded.
+    3. Create space between images and text.
+*/
+
+.img-float {
+    float: left;
+    border-radius: 50%;
+    padding-right: 10px;
+}
+
+/*  1. Float image on Contact page to the left.
+    2. Create space between image and text.
+*/
+
+.img-float1 {
+    float: left;
+    margin-right: 10px;
+}
+
+
+/*
+NAVIGATION
+============================================================================*/
+
+/*  1. Display links as inline-blocks to get more styling options
+    2. Expand elements.
+    3. Display imported font family "Glegoo".
+    4. Make font bolder.
+    5. Add color.
+    6. Remove text underline.
+    */
+
+.nav-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 auto;
+    font-family: 'Glegoo', serif;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+}
+
+/*  Change color and background color when mouse is placed over element.
+*/
+
+.nav-link:hover {
+    color: rgba(212, 182, 36, 1);
+    background-color: rgba(181, 181, 181, 0.2);
+}
+
+/* Change color, background-color and border radius when user is on selected page.
+*/
+
+.active {
+    background-color: rgba(212, 182, 36, 0.7);
+    color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+
+/*
+FORM
+============================================================================*/
+
+/*  1. Add space around input and textarea.
+    2. Change background color of input and textarea elements.
+    3. Add space inside input and textarea elements.
+    4. Make elements 65% of parent containers width.
+    5. Remove borders.
+    6. Add box-shadow.
+    */
+
+input, 
+textarea {
+    margin: 10px 10px 30px 0;
+    background-color: rgba(212, 182, 36, 0.7);
+    padding: 5px;
+    width: 65%;
+    border: none;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Change color of placeholder text.
+*/
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+
+/*  1. Display as block to automatically move the element coming after to a new line.
+    2. Add space below element.
+    */
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/*  Add space above element.
+*/
+
+form {
+    margin-top: 40px;
+}
+
+/* Align form content and above text to left.
+*/
+.form {
+    text-align: left;
+}
+
+/* Make form unaffected by float on above image.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+} 
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.required {
+  color: rgba(230, 17, 2, 1);
+  font-size: 18px;
+  font-weight: 600;
+}
