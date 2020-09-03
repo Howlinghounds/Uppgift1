@@ -281,3 +281,28 @@ form {
   font-size: 18px;
   font-weight: 600;
 }
+
+#animation-height {
+    position: relative;
+    height: 200px;
+    width: 100px;
+    margin: 40px 0;
+    left: 40%;
+}
+
+.animation {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(212, 182, 36, 1);
+    border-radius: 50%;
+    animation: bounce 1s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    from { transform: translate3d(0, 0, 0) }
+    to { transform: translate3d(0, 200px, 0)}
+}
